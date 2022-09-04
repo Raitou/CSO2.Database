@@ -21,8 +21,6 @@ namespace CSO2.Database.Core.Models
         [DefaultValue(0)]
         public int LoginFailedCount { get; set; } = 0;
 
-        public IGN Ign { get; set; } = null!;
-
         [Required]
         public DateTime Created { get; set; } = DateTime.UtcNow;
 

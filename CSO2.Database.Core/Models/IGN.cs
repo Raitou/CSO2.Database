@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -7,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace CSO2.Database.Core.Models
 {
+    [Keyless]
     public class IGN
     {
-        [Key]
-        public int Id { get; set; }
+        public User User { get; set; } = null!;
 
         [Required]
         public string Name { get; set; } = null!;
