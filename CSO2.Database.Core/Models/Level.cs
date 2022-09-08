@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -8,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CSO2.Database.Core.Models
 {
-    public class IGN
+    public class Level
     {
         [Key]
         public int Id { get; set; }
@@ -17,8 +16,8 @@ namespace CSO2.Database.Core.Models
         public User User { get; set; } = null!;
 
         [Required]
-        public string Name { get; set; } = null!;
+        public Rank Rank { get; set; } = null!;
 
-        public DateTime? Updated { get; set; }
+        public ulong CurrExp { get; set; } = 0;
     }
 }

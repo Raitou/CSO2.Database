@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -8,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CSO2.Database.Core.Models
 {
-    public class IGN
+    public class Currency
     {
         [Key]
         public int Id { get; set; }
@@ -16,9 +15,10 @@ namespace CSO2.Database.Core.Models
         [Required]
         public User User { get; set; } = null!;
 
-        [Required]
-        public string Name { get; set; } = null!;
+        public ulong CashPoints { get; set; } = 0;
 
-        public DateTime? Updated { get; set; }
+        public ulong GamePoints { get; set; } = 0;
+
+        public ulong MPoints { get; set; } = 0;
     }
 }
