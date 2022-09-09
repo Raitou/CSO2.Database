@@ -4,6 +4,10 @@ namespace CSO2.Database.Core.Data
 {
     public class MySQLContext : BaseDBContext
     {
+        public MySQLContext(DbContextOptions options) : base(options)
+        {
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             MySqlServerVersion serverVersion = new MySqlServerVersion(new Version(8, 0, 29));

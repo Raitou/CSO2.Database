@@ -1,15 +1,13 @@
-﻿using CSO2.Database.Core.Models;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace CSO2.Database.Core.Data
 {
     public class MSSQLContext : BaseDBContext
     {
+        public MSSQLContext(DbContextOptions options) : base(options)
+        {
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder
